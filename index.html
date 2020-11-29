@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini App</title>
+    <link rel="icon" type="image/png" href="#">
+    <link rel="stylesheet" href="css/master.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <main id="app">
+        <h1 @click="clickHeader" class="mainTitle">{{ message }}</h1>
+        <p class="desc">{{anotherMessage}}</p>
+        
+        <!-- show the prof data in profs array -->
+        <ul>
+            <!-- this is a custom Vue component defined in main.js -->
+            <div class="miniCard">
+                
+                <a href="" v-for="mini in minis" class="miniLink" @click.prevent="showDetail(mini)" :class="{'mini-button-modifier' : removeAformat}">
+                    <mini-card :mini="mini" :key="mini.id" class="miniColumn" >
+                        
+                    </mini-card>
+                    
+                </a>
+                <!-- <section class="bio-data" :class="{'show-bio' : showBioData}">
+                    <h1>Model: {{ currentMiniData.model }}</h1>
+                    <p>Seats: {{ currentMiniData.seats }}</p>
+                    <p>Emission: {{ currentMiniData.emission }}</p>
+                    <p>Consumption: {{ currentMiniData.consumption }}</p>
+                    <p>Price: {{ currentMiniData.price }}</p>
+                </section> -->
+            </div>
+            <div class="showInfo">
+                <li v-for="mini in minis">
+                    <!-- <p>Mini Model: {{ mini.model }}, Price: {{ mini.price }}</p> -->
+                    <!-- <a href="" class="miniLink" @click.prevent="showDetail(mini)" :class="{'mini-button-modifier' : removeAformat}">Show {{ mini.model }}'s info </a>  -->
+                    <!-- <a href="" class="miniLink" @click.prevent="showDetail(index)" :class="{'mini-button-modifier' : removeAformat}">Show {{ mini.name }}'s info </a> -->
+                </li>
+            </div>
+            
+        </ul>
+
+        <!-- show more section-->
+        <!-- <section class="bio-data" :class="{'show-bio' : showBioData}"></section><reveal-mini :reveal="reveal"></reveal-mini></section> -->
+        <div class="wrapper">
+            <section class="bio-data" :class="{'show-bio' : showBioData}">
+                <h1>Model: {{ currentMiniData.model }}</h1>
+                <p>Seats: {{ currentMiniData.seats }}</p>
+                <p>Emission: {{ currentMiniData.emission }}</p>
+                <p>Consumption: {{ currentMiniData.consumption }}</p>
+                <p>Price: {{ currentMiniData.price }}</p>
+            </section>
+            <div class="push"></div>
+        </div>
+    </main>
+    <footer class="footer"></footer>
+</body>
+<script src="js/main.js" type="module"></script>
+</html>
