@@ -1,0 +1,28 @@
+Roadmap:
+
+1- Create a database called minidata
+2- Create a table called minis. And add columns: ID, Model, Seats, Emission, Consumption, Price, Image
+3- Insert mini car models with their detailed information into minis table
+4- Create connect.php and write databse credentials, host and database information in it
+5- Create functions.php and create functions to query data from database via SQL (json_encode results)
+6- Create index.php and include connect.php and functions.php. Make an if else statement and return results
+7- In index.html file, give an id "#app" to section that we want our app in.
+8- Implement vue script into that html file
+9- Set a JS file to throw errors. And adjust Error strings for each common code.
+10- In main.js file create a vue lifecycle with necessary vars, functions and arrays:
+11- Set mounted lifecycle hook to fetchdata via index.php and log it to console and catch errors.
+12- Run a method in "updated" when we change our view to see it in console
+13- Create a showDetail function under Methods to see details of model when we mouseover/click
+14- Toggle the property between true and false using a ternary statement
+15- Create MiniCard.js, set data as a function. Create a template for our data.
+16- Console the log to see when it's created. And console log under methods to see when clicked.
+17- Import MiniCard.js into main.js and match that with a component
+18- In main.js, link Vue to our element in our HTML with "$mount("#app")"
+19- In our index.html file, place our mini-card component under element with #app
+20- Give mini-card component a :key . (Mostly is "id")
+21- Create a section and use Vue to make it shows us our target model's details when we mouseover/click
+
+
+
+How to use:
+-Just mouseover on any model and lay back :)
