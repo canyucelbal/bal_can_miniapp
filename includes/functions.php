@@ -1,6 +1,4 @@
 <?php
-    // include the file we just wrote - connect
-     // like a JS import statement
 
     $result = [];
 
@@ -14,7 +12,6 @@
             $result[] = $row;
         }
 
-        //return $result;
         echo(json_encode($result));
     }
 
@@ -28,6 +25,5 @@
             $result[] = $row;
         }
 
-        //return $result;
         echo(json_encode($result));
     }

@@ -1,9 +1,9 @@
 <?php
-    include("connect.php");
-    include("functions.php");
+    include 'connect.php';
+    include 'functions.php';
 
-    if (isset($_GET["id"])) {
-        $targetID = $_GET["id"];
+    if (isset($_GET['id'])) {
+        $targetID = $_GET['id'];
         $result = getSingleCar($pdo, $targetID);
 
         return $result;
